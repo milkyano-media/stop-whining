@@ -1,15 +1,57 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
+const gothamRounded = localFont({
+    src: [
+        {
+            path: "../../public/fonts/gotham-rounded/gothamrnd_light.otf",
+            weight: "300",
+            style: "normal",
+        },
+        {
+            path: "../../public/fonts/gotham-rounded/gothamrnd_lightitalic.otf",
+            weight: "300",
+            style: "italic",
+        },
+        {
+            path: "../../public/fonts/gotham-rounded/gothamrnd_book.otf",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../../public/fonts/gotham-rounded/gothamrnd_bookitalic.otf",
+            weight: "400",
+            style: "italic",
+        },
+        {
+            path: "../../public/fonts/gotham-rounded/gothamrnd_medium.otf",
+            weight: "500",
+            style: "normal",
+        },
+        {
+            path: "../../public/fonts/gotham-rounded/gothamrnd_mediumitalic.otf",
+            weight: "500",
+            style: "italic",
+        },
+        {
+            path: "../../public/fonts/gotham-rounded/gothamrnd_bold.otf",
+            weight: "700",
+            style: "normal",
+        },
+        {
+            path: "../../public/fonts/gotham-rounded/gothamrnd_bolditalic.otf",
+            weight: "700",
+            style: "italic",
+        },
+    ],
+    variable: "--next-font-gotham-rounded",
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const inter = Inter({
     subsets: ["latin"],
+    variable: "--next-font-inter",
 });
 
 export const metadata: Metadata = {
@@ -23,8 +65,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+        <html lang="en" className={`${gothamRounded.variable} ${inter.variable}`}>
+            <body className={`bg-primary py-4 text-white antialiased`}>{children}</body>
         </html>
     );
 }

@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary: #045b7d;
+    --font-inter: var(--next-font-inter);
+    --font-gotham-rounded: var(--next-font-gotham-rounded);
+    --default-font-family: var(--font-gotham-rounded);
+}
+
+.next-font-inter {
+    font-family: var(--next-font-inter);
+}
+
+.next-font-gotham-rounded {
+    font-family: var(--next-font-gotham-rounded);
+}
