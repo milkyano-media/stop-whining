@@ -1,11 +1,56 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #045b7d;
+    /* Color System - Semantic Naming */
+    --color-primary: #045b7d; /* Main brand color */
+    --color-primary-dark: #095478; /* Darker variant */
+    --color-primary-darker: #104a73; /* Even darker */
+
+    --color-accent: #e7ebd6; /* Cream/beige accent */
+    --color-accent-light: #f2f4f7; /* Lighter variant */
+
+    --color-success-bg: #d1fadf; /* CheckIcon background */
+    --color-success: #12b76a; /* CheckIcon checkmark */
+
+    --color-text-muted: #b7cdd6; /* Muted text */
+    --color-gradient-teal: #035a7c; /* Gradient end */
+    --color-gradient-blue: #0c7299; /* Video border gradient */
+    --color-gradient-cyan: #478596; /* Button gradient */
+
+    /* Fonts */
     --font-inter: var(--next-font-inter);
     --font-gotham-rounded: var(--next-font-gotham-rounded);
     --font-poppins: var(--next-font-poppins);
     --default-font-family: var(--font-gotham-rounded);
+}
+
+/* Custom Utility Classes */
+.gradient-primary {
+    background: linear-gradient(198.29deg, #e7ebd6 45.51%, #035a7c 112.16%);
+}
+
+.gradient-secondary {
+    background: linear-gradient(198.29deg, #e7ebd6 23.6%, #478596 100.05%);
+}
+
+.gradient-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.26) 0%, rgba(153, 153, 153, 0.26) 100%);
+}
+
+.gradient-benefit-card {
+    background: linear-gradient(182.19deg, rgba(255, 255, 255, 0.26) 1.84%, rgba(153, 153, 153, 0.26) 98.45%);
+}
+
+.gradient-video-border {
+    background: linear-gradient(to bottom right, #e7ebd6, #0c7299);
+}
+
+.shadow-button {
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.shadow-card {
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
 }
 
 .next-font-inter {
