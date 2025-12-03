@@ -4,6 +4,7 @@
     --color-primary: #045b7d;
     --font-inter: var(--next-font-inter);
     --font-gotham-rounded: var(--next-font-gotham-rounded);
+    --font-poppins: var(--next-font-poppins);
     --default-font-family: var(--font-gotham-rounded);
 }
 

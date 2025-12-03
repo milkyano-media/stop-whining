@@ -6,3 +6,4 @@
 - the HTML tag is still not semantic
 - not responsive (only for mobile design)
 - container padding hard coded
+- there is some inline style (box-shadow and linear gradient)
