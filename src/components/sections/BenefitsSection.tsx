@@ -4,8 +4,8 @@ import Ellipse8 from "@/components/ui/ellipses/Ellipse8";
 
 export function BenefitsSection() {
     return (
-        <section className="px-6 py-10 xl:px-91">
-            <article className="gradient-benefit-card shadow-card relative rounded-2xl border border-gray-200 px-6 py-10 before:absolute before:top-0 before:left-1/2 before:block before:h-1 before:w-47.5 before:-translate-x-1/2 before:bg-white">
+        <section className="px-6 py-10 xl:px-80">
+            <article className="gradient-benefit-card shadow-card relative rounded-2xl border border-gray-200 px-6 py-10 before:absolute before:top-0 before:left-1/2 before:block before:h-1 before:w-48 before:-translate-x-1/2 before:bg-white">
                 <h2 className="mb-8 text-center text-3xl font-bold">What You Get When You Join Us</h2>
                 <Ellipse8 />
 

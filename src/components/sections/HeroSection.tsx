@@ -4,21 +4,21 @@ import { VideoPlaceholder } from "@/ui/VideoPlaceholder";
 
 export function HeroSection() {
     return (
-        <section className="xl:mb-29">
-            <div className="mb-4 px-6 xl:mb-22">
-                <h1 className="text-center text-2xl font-bold text-white xl:px-[500px]">
+        <section className="xl:mb-28">
+            <div className="mb-4 px-6 xl:mb-20">
+                <h1 className="text-center text-2xl font-bold text-white xl:px-96">
                     ARE YOU THE ONE WHO DESERVES THIS SPOT?
                 </h1>
             </div>
 
-            <div className="mb-6 px-6 xl:mb-20.5">
+            <div className="mb-6 px-6 xl:mb-20">
                 <VideoPlaceholder />
             </div>
 
             <div className="mb-8 px-6">
-                <h2 className="mb-1.5 text-center text-2xl font-bold text-white xl:mb-17">Associated with</h2>
-                <div className="mx-auto flex h-7 items-center justify-center gap-5 xl:h-27 xl:w-196 xl:gap-19">
-                    <div className="h-full xl:w-54">
+                <h2 className="mb-1.5 text-center text-2xl font-bold text-white xl:mb-16">Associated with</h2>
+                <div className="mx-auto flex h-7 items-center justify-center gap-5 xl:h-28 xl:max-w-4xl xl:gap-20">
+                    <div className="h-full xl:w-56">
                         <Image
                             alt="Muli Oyster Bar Logo"
                             src="https://s3.milkyano.com/milkyano/stop-whining/muli-oyster-bar-logo.png"
@@ -27,7 +27,7 @@ export function HeroSection() {
                             className="h-full w-full"
                         />
                     </div>
-                    <div className="h-full xl:h-26 xl:w-123">
+                    <div className="h-full xl:h-28 xl:w-auto">
                         <Image
                             alt="Stop Whining Long Logo"
                             src="https://s3.milkyano.com/milkyano/stop-whining/stop-whining-long-logo.png"

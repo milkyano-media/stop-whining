@@ -29,7 +29,7 @@ export default function Home() {
             </main>
 
             <footer className="font-inter bg-accent text-primary-dark">
-                <div className="px-4 py-12 xl:flex xl:gap-16 xl:px-28">
+                <div className="px-4 py-12 xl:flex xl:gap-16 xl:px-32">
                     <div className="mb-12 flex flex-col gap-6">
                         <div className="flex items-center gap-2">
                             <div className="h-8 w-8">
@@ -109,7 +109,7 @@ export default function Home() {
                     </nav>
                 </div>
 
-                <div className="bg-primary-dark px-4 py-12 text-white xl:flex xl:flex-row-reverse xl:justify-between xl:px-28 xl:text-[#98A2B3]">
+                <div className="bg-primary-dark px-4 py-12 text-white xl:flex xl:flex-row-reverse xl:justify-between xl:px-32 xl:text-gray-400">
                     <div className="mb-6 flex gap-6 xl:mb-0">
                         <TwitterIcon />
                         <LinkedinIcon />

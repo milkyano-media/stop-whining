@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export function Header() {
     return (
-        <header className="xl:mb-21.5">
+        <header className="xl:mb-20">
             <div className="mb-4 px-6">
-                <div className="mx-auto h-24 w-25 xl:h-63.75 xl:w-66.5">
+                <div className="mx-auto h-24 w-24 xl:h-64 xl:w-64">
                     <Image
                         alt="StopWhining Logo"
                         src="https://s3.milkyano.com/milkyano/stop-whining/stop-whining-logo.png"
