@@ -29,7 +29,7 @@ export default function Home() {
             </main>
 
             <footer className="font-inter bg-accent text-primary-dark">
-                <div className="px-4 py-12">
+                <div className="px-4 py-12 xl:flex xl:gap-16 xl:px-28">
                     <div className="mb-12 flex flex-col gap-6">
                         <div className="flex items-center gap-2">
                             <div className="h-8 w-8">
@@ -47,7 +47,7 @@ export default function Home() {
                         <p>Design amazing digital experiences that create more happy in the world.</p>
                     </div>
 
-                    <nav className="grid grid-cols-2 gap-8">
+                    <nav className="grid grid-cols-2 gap-8 xl:grid-cols-5">
                         <div className="flex flex-col gap-4">
                             <h4 className="font-semibold text-black">Product</h4>
                             <div className="flex flex-col gap-3 font-medium">
@@ -109,8 +109,8 @@ export default function Home() {
                     </nav>
                 </div>
 
-                <div className="bg-primary-dark px-4 py-12 text-white">
-                    <div className="mb-6 flex gap-6">
+                <div className="bg-primary-dark px-4 py-12 text-white xl:flex xl:flex-row-reverse xl:justify-between xl:px-28 xl:text-[#98A2B3]">
+                    <div className="mb-6 flex gap-6 xl:mb-0">
                         <TwitterIcon />
                         <LinkedinIcon />
                         <FacebookIcon />
@@ -119,7 +119,7 @@ export default function Home() {
                         <DribbbleIcon />
                     </div>
 
-                    <p>© 2077 Untitled UI. All rights reserved.</p>
+                    <p>© 2077 Stop Whining. All rights reserved.</p>
                 </div>
             </footer>
         </div>

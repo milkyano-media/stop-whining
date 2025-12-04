@@ -2,22 +2,20 @@ import Image from "next/image";
 
 export function Header() {
     return (
-        <header>
-            {/* Logo Image Container */}
+        <header className="xl:mb-21.5">
             <div className="mb-4 px-6">
-                <div className="mx-auto h-24 w-25">
+                <div className="mx-auto h-24 w-25 xl:h-63.75 xl:w-66.5">
                     <Image
                         alt="StopWhining Logo"
                         src="https://s3.milkyano.com/milkyano/stop-whining/stop-whining-logo.png"
-                        width={200}
-                        height={192}
+                        width={532}
+                        height={510}
                         className="w-full"
                         loading="eager"
                     />
                 </div>
             </div>
 
-            {/* Google Rating Container */}
             <div className="mb-6 px-6">
                 <Image
                     alt="Google Rating"
