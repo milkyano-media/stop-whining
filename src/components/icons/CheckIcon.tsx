@@ -4,6 +4,12 @@ interface CheckIconProps {
     checkColor?: string;
 }
 
+/**
+ * CheckIcon component with customizable size and colors
+ * @default bgColor - #D1FADF (matches --color-success-bg in globals.css)
+ * @default checkColor - #12B76A (matches --color-success in globals.css)
+ * Note: If theme colors change, update these defaults to match
+ */
 export default function CheckIcon({ size = 24, bgColor = "#D1FADF", checkColor = "#12B76A" }: CheckIconProps = {}) {
     return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

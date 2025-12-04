@@ -72,7 +72,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${gothamRounded.variable} ${inter.variable} ${poppins.variable} overflow-x-hidden`}>
-            <body className={`bg-primary pt-4 text-white antialiased`}>{children}</body>
+            <body className="bg-primary overflow-x-hidden pt-4 text-white antialiased">{children}</body>
         </html>
     );
 }
