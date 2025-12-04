@@ -29,11 +29,8 @@ export default function Home() {
             </main>
 
             <footer className="font-inter bg-accent text-primary-dark">
-                {/* Container */}
                 <div className="px-4 py-12">
-                    {/* Footer content */}
                     <div className="mb-12 flex flex-col gap-6">
-                        {/* Footer Logo */}
                         <div className="flex items-center gap-2">
                             <div className="h-8 w-8">
                                 <Image
@@ -50,7 +47,6 @@ export default function Home() {
                         <p>Design amazing digital experiences that create more happy in the world.</p>
                     </div>
 
-                    {/* Footer Nav */}
                     <nav className="grid grid-cols-2 gap-8">
                         <div className="flex flex-col gap-4">
                             <h4 className="font-semibold text-black">Product</h4>
@@ -113,7 +109,6 @@ export default function Home() {
                     </nav>
                 </div>
 
-                {/* Social */}
                 <div className="bg-primary-dark px-4 py-12 text-white">
                     <div className="mb-6 flex gap-6">
                         <TwitterIcon />
