@@ -18,7 +18,7 @@ export function RequirementsSection() {
                     <ChecklistItem>Approachable, charismatic, easy to talk to</ChecklistItem>
                     <ChecklistItem>A fast learner</ChecklistItem>
                     <ChecklistItem>Quick with hands</ChecklistItem>
-                    <ChecklistItem>Open to feedback & criticsm</ChecklistItem>
+                    <ChecklistItem>Open to feedback & criticism</ChecklistItem>
                     <ChecklistItem>Mentally strong</ChecklistItem>
                     <ChecklistItem>Big confidence in skills</ChecklistItem>
                     <ChecklistItem>Able to work under pressure</ChecklistItem>
@@ -27,7 +27,7 @@ export function RequirementsSection() {
                 <RequirementCard
                     title="SEAFOOD KNOWLEDGE"
                     ellipse={<Ellipse5 />}
-                    footnote="*BONUS: Grew up by the coast & and have experience in prepping seafood."
+                    footnote="*BONUS: Grew up by the coast and have experience in prepping seafood."
                 >
                     <ChecklistItem>Basic Understanding of Oysters & seafood in general</ChecklistItem>
                     <ChecklistItem>Has eaten a variety of seafood growing up</ChecklistItem>

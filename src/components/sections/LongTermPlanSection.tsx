@@ -7,7 +7,7 @@ export function LongTermPlanSection() {
 
             <div className="font-poppins relative text-center before:absolute before:top-0 before:left-0 before:block before:h-11 before:w-14 before:bg-[url(https://s3.milkyano.com/milkyano/stop-whining/double-quote-icon.svg)] xl:before:left-1/2 xl:before:-translate-x-1/2">
                 <h3 className="mb-7 pt-11 text-3xl font-medium xl:px-80">
-                    You&apos;re not just another number to us, You are special and will be a part of our growth family
+                    You&apos;re not just another number to us, you are special and will be a part of our growth family
                     business.
                 </h3>
                 <div className="flex flex-col items-center justify-between gap-10 px-3">
