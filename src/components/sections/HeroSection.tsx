@@ -12,7 +12,14 @@ export function HeroSection() {
             </div>
 
             <div className="mb-6 px-6 xl:mb-20">
-                <VideoPlaceholder />
+                <VideoPlaceholder>
+                    <video className="h-full w-full rounded-sm" controls>
+                        <source
+                            src="https://s3.milkyano.com/milkyano/stop-whining/vsl-stop-whining.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
+                </VideoPlaceholder>
             </div>
 
             <div className="mb-8 px-6">
