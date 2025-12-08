@@ -14,7 +14,7 @@ export function Button({ children, variant = "primary", className = "", onClick 
 
     return (
         <button
-            className={`shadow-button mx-auto block rounded-lg px-12 py-3 text-xl font-bold cursor-pointer transition-all duration-200 ${variantStyles[variant]} ${className}`}
+            className={`shadow-button mx-auto block cursor-pointer rounded-lg px-12 py-3 text-xl font-bold transition-all duration-200 ${variantStyles[variant]} ${className}`}
             onClick={onClick}
         >
             {children}
