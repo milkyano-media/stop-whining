@@ -13,7 +13,7 @@
     "@hookform/resolvers": "^5.2.2",
     "libphonenumber-js": "^1.12.31",
     "minio": "^8.0.6",
-    "next": "16.0.6",
+    "next": "16.0.7",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-hook-form": "^7.68.0",
@@ -25,11 +25,11 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
+    "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.0.6",
+    "eslint-config-next": "^16.0.6",
     "prettier": "^3.7.3",
-    "prettier-plugin-tailwindcss": "^0.7.2",
+    "prettier-plugin-tailwindcss": "~0.7.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

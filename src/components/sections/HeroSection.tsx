@@ -12,7 +12,19 @@ export function HeroSection() {
             </div>
 
             <div className="mb-6 px-6 xl:mb-20">
-                <VideoPlaceholder />
+                <VideoPlaceholder>
+                    <video
+                        className="w-full rounded-sm"
+                        controls
+                        poster="https://s3.milkyano.com/milkyano/stop-whining/vsl-video-thumbnail.png"
+                    >
+                        <source
+                            src="https://s3.milkyano.com/milkyano/stop-whining/vsl-stop-whining.mp4"
+                            type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                    </video>
+                </VideoPlaceholder>
             </div>
 
             <div className="mb-8 px-6">
