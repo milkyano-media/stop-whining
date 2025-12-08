@@ -21,11 +21,11 @@ export default function Home() {
 
             <main>
                 <HeroSection />
-                <GoogleFormSection />
                 <IntroSection />
                 <RequirementsSection />
                 <LongTermPlanSection />
                 <BenefitsSection />
+                <GoogleFormSection />
             </main>
 
             <footer className="font-inter bg-accent text-primary-dark">
