@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/ui/Button";
 import { VideoPlaceholder } from "@/ui/VideoPlaceholder";
+import { scrollToForm } from "@/utils/scrollToForm";
 
 export function HeroSection() {
     return (
@@ -52,7 +55,9 @@ export function HeroSection() {
             </div>
 
             <div className="mb-12 px-6">
-                <Button variant="primary">SEE IF YOU QUALIFY</Button>
+                <Button variant="primary" onClick={scrollToForm}>
+                    SEE IF YOU QUALIFY
+                </Button>
             </div>
         </section>
     );

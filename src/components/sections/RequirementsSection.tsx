@@ -1,3 +1,5 @@
+"use client";
+
 import { RequirementCard } from "@/ui/RequirementCard";
 import { ChecklistItem } from "@/ui/ChecklistItem";
 import { Button } from "@/ui/Button";
@@ -5,6 +7,7 @@ import Ellipse4 from "@/components/ui/ellipses/Ellipse4";
 import Ellipse5 from "@/components/ui/ellipses/Ellipse5";
 import Ellipse6 from "@/components/ui/ellipses/Ellipse6";
 import Ellipse7 from "@/components/ui/ellipses/Ellipse7";
+import { scrollToForm } from "@/utils/scrollToForm";
 
 export function RequirementsSection() {
     return (
@@ -46,7 +49,9 @@ export function RequirementsSection() {
             </div>
 
             <div>
-                <Button variant="secondary">SEE IF YOU QUALIFY</Button>
+                <Button variant="secondary" onClick={scrollToForm}>
+                    SEE IF YOU QUALIFY
+                </Button>
             </div>
         </section>
     );
