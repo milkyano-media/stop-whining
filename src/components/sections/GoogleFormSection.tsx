@@ -74,7 +74,7 @@ export function GoogleFormSection() {
 
     return (
         <section id="application-form" className="mb-12 px-6">
-            <div className="shadow-card mx-auto max-w-sm rounded-[20px] bg-white p-8 xl:max-w-2xl xl:p-12">
+            <div className="shadow-card mx-auto max-w-sm rounded-[20px] bg-white p-8 xl:max-w-5xl xl:p-12">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     {/* First Name */}
                     <FormInput
