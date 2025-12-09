@@ -20,8 +20,8 @@ export function HeroSection() {
                     <VideoPlayer
                         src="https://s3.milkyano.com/milkyano/stop-whining/vsl-stop-whining.mp4"
                         poster="https://s3.milkyano.com/milkyano/stop-whining/vsl-video-thumbnail.png"
-                        autoplay={true}
-                        muted
+                        autoplay={false}
+                        muted={false}
                         className="w-full rounded-sm"
                     />
                 </VideoPlaceholder>
@@ -31,7 +31,7 @@ export function HeroSection() {
                 <h2 className="mb-1.5 text-center text-2xl font-bold text-white xl:mb-16 xl:text-5xl">
                     Associated with
                 </h2>
-                <div className="mx-auto flex h-7 items-center justify-center gap-5 xl:h-28 xl:max-w-4xl xl:gap-20">
+                <div className="mx-auto flex h-7 max-w-53 items-center justify-center gap-5 xl:h-28 xl:max-w-4xl xl:gap-20">
                     <div className="h-full xl:w-56">
                         <Image
                             alt="Muli Oyster Bar Logo"
