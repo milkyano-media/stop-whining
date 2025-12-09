@@ -12,7 +12,7 @@ export function BenefitItem({ title, description }: BenefitItemProps) {
                 <CheckIcon />
             </div>
             <div>
-                <h3 className="mb-4 font-bold">{title}</h3>
+                <h3 className="mb-4 font-bold xl:text-2xl">{title}</h3>
                 <p className="text-text-muted">{description}</p>
             </div>
         </div>

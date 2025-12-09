@@ -1,12 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/ui/Button";
 import { VideoPlaceholder } from "@/ui/VideoPlaceholder";
+import { scrollToForm } from "@/utils/scrollToForm";
 
 export function HeroSection() {
     return (
-        <section className="xl:mb-28">
+        <section className="xl:mb-22">
             <div className="mb-4 px-6 xl:mb-20">
-                <h1 className="text-center text-2xl font-bold text-white xl:px-96">
+                <h1 className="text-center text-2xl font-bold text-white xl:px-96 xl:text-5xl">
                     ARE YOU THE ONE WHO DESERVES THIS SPOT?
                 </h1>
             </div>
@@ -28,7 +31,9 @@ export function HeroSection() {
             </div>
 
             <div className="mb-8 px-6">
-                <h2 className="mb-1.5 text-center text-2xl font-bold text-white xl:mb-16">Associated with</h2>
+                <h2 className="mb-1.5 text-center text-2xl font-bold text-white xl:mb-16 xl:text-5xl">
+                    Associated with
+                </h2>
                 <div className="mx-auto flex h-7 items-center justify-center gap-5 xl:h-28 xl:max-w-4xl xl:gap-20">
                     <div className="h-full xl:w-56">
                         <Image
@@ -52,7 +57,9 @@ export function HeroSection() {
             </div>
 
             <div className="mb-12 px-6">
-                <Button variant="primary">SEE IF YOU QUALIFY</Button>
+                <Button variant="primary" onClick={scrollToForm}>
+                    SEE IF YOU QUALIFY
+                </Button>
             </div>
         </section>
     );

@@ -52,7 +52,7 @@ export function GoogleFormSection() {
                 process.env.NEXT_PUBLIC_SPREADSHEET_URL ||
                 "https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/edit";
 
-            const result = await submitFormToGoogleSheets({
+            await submitFormToGoogleSheets({
                 formData: data,
                 spreadsheetUrl,
                 emailReceiver: process.env.NEXT_PUBLIC_EMAIL_RECEIVER,
@@ -73,8 +73,8 @@ export function GoogleFormSection() {
     };
 
     return (
-        <section className="mb-12 px-6">
-            <div className="shadow-card mx-auto max-w-sm rounded-[20px] bg-white p-8 xl:max-w-2xl xl:p-12">
+        <section id="application-form" className="mb-12 px-6">
+            <div className="shadow-card mx-auto max-w-sm rounded-[20px] bg-white p-8 xl:max-w-5xl xl:p-12">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     {/* First Name */}
                     <FormInput
@@ -239,7 +239,8 @@ export function GoogleFormSection() {
                     {submitSuccess && (
                         <div className="rounded-lg bg-green-50 p-4">
                             <p className="font-inter text-sm font-medium text-green-800">
-                                Form submitted successfully! We'll review your application and get back to you soon.
+                                Form submitted successfully! We&apos;ll review your application and get back to you
+                                soon.
                             </p>
                         </div>
                     )}
@@ -255,7 +256,7 @@ export function GoogleFormSection() {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="font-gotham-rounded w-full rounded-lg bg-gradient-to-r from-[#035a7c] to-[#1d3a69] py-3 text-xl font-bold text-white transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
+                        className="font-gotham-rounded from-gradient-teal w-full rounded-lg bg-linear-to-r to-[#1d3a69] py-3 text-xl font-bold text-white transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
                         style={{
                             background: "linear-gradient(135deg, #035a7c 0%, #1d3a69 80.51%)",
                         }}

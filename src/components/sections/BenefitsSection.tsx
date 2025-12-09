@@ -1,6 +1,9 @@
+"use client";
+
 import { BenefitItem } from "@/ui/BenefitItem";
 import { Button } from "@/ui/Button";
 import Ellipse8 from "@/components/ui/ellipses/Ellipse8";
+import { scrollToForm } from "@/utils/scrollToForm";
 
 export function BenefitsSection() {
     return (
@@ -40,7 +43,9 @@ export function BenefitsSection() {
                         description="We don't treat staff like replaceable labour. Your personality, ambition, and work ethic matter."
                     />
 
-                    <Button variant="white">SEE IF YOU QUALIFY</Button>
+                    <Button variant="white" onClick={scrollToForm}>
+                        SEE IF YOU QUALIFY
+                    </Button>
                 </div>
             </article>
         </section>
