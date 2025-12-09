@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/ui/Button";
 import { VideoPlaceholder } from "@/ui/VideoPlaceholder";
+import { VideoPlayer } from "@/ui/VideoPlayer";
 import { scrollToForm } from "@/utils/scrollToForm";
 
 export function HeroSection() {
@@ -16,17 +17,13 @@ export function HeroSection() {
 
             <div className="mb-6 px-6 xl:mb-20">
                 <VideoPlaceholder>
-                    <video
-                        className="w-full rounded-sm"
-                        controls
+                    <VideoPlayer
+                        src="https://s3.milkyano.com/milkyano/stop-whining/vsl-stop-whining.mp4"
                         poster="https://s3.milkyano.com/milkyano/stop-whining/vsl-video-thumbnail.png"
-                    >
-                        <source
-                            src="https://s3.milkyano.com/milkyano/stop-whining/vsl-stop-whining.mp4"
-                            type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                    </video>
+                        autoplay={true}
+                        muted
+                        className="w-full rounded-sm"
+                    />
                 </VideoPlaceholder>
             </div>
 
@@ -39,8 +36,8 @@ export function HeroSection() {
                         <Image
                             alt="Muli Oyster Bar Logo"
                             src="https://s3.milkyano.com/milkyano/stop-whining/muli-oyster-bar-logo.png"
-                            width={432}
-                            height={214}
+                            width={864}
+                            height={428}
                             className="h-full w-full"
                         />
                     </div>
@@ -48,8 +45,8 @@ export function HeroSection() {
                         <Image
                             alt="Stop Whining Long Logo"
                             src="https://s3.milkyano.com/milkyano/stop-whining/stop-whining-long-logo.png"
-                            width={982}
-                            height={206}
+                            width={1964}
+                            height={412}
                             className="h-full w-full"
                         />
                     </div>

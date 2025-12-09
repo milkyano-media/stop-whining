@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import "video.js/dist/video-js.css";
+import "./videojs-theme.css";
 
 const gothamRounded = localFont({
     src: [
