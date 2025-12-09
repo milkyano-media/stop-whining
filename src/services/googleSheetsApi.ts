@@ -30,41 +30,67 @@ export async function submitFormToGoogleSheets({
     emailReceiver,
 }: SubmitFormParams): Promise<SubmissionResponse> {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/form-submissions`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                formData: {
-                    firstName: formData.firstName,
-                    lastName: formData.lastName,
-                    email: formData.email,
-                    phoneNumber: formData.phoneNumber,
-                    age: formData.age,
-                    speakMandarin: formData.speakMandarin,
-                    englishRating: formData.englishRating,
-                    whyWorkHere: formData.whyWorkHere,
-                    whatMotivatesYou: formData.whatMotivatesYou,
-                    yourGoal: formData.yourGoal,
-                    seafoodKnowledge: formData.seafoodKnowledge,
-                    workPhilosophy: formData.workPhilosophy,
-                    resumeUrl: formData.resumeUrl,
-                    agreePrivacy: formData.agreePrivacy,
-                    submittedAt: new Date().toISOString(),
-                },
-                spreadsheetUrl,
-                emailReceiver,
-                metadata: {
-                    formType: "recruitment-qualification",
-                    subject: "New Recruitment Form Submission - Stop Whining",
-                },
-            }),
-        });
+        // Prepare the submission data
+        const submissionData = {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phoneNumber: formData.phoneNumber,
+            age: formData.age,
+            speakMandarin: formData.speakMandarin,
+            englishRating: formData.englishRating,
+            whyWorkHere: formData.whyWorkHere,
+            whatMotivatesYou: formData.whatMotivatesYou,
+            yourGoal: formData.yourGoal,
+            seafoodKnowledge: formData.seafoodKnowledge,
+            workPhilosophy: formData.workPhilosophy,
+            resumeUrl: formData.resumeUrl,
+            agreePrivacy: formData.agreePrivacy,
+            submittedAt: new Date().toISOString(),
+        };
 
+        // Submit to Google Sheets API and Pabbly webhook in parallel
+        const [googleSheetsResponse, webhookResponse] = await Promise.allSettled([
+            // Google Sheets submission
+            fetch(`${API_BASE_URL}/api/form-submissions`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    formData: submissionData,
+                    spreadsheetUrl,
+                    emailReceiver,
+                    metadata: {
+                        formType: "recruitment-qualification",
+                        subject: "New Recruitment Form Submission - Stop Whining",
+                    },
+                }),
+            }),
+            // Pabbly webhook submission
+            fetch("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjcwNTZkMDYzNDA0MzI1MjZmNTUzMjUxM2Ii_pc", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(submissionData),
+            }),
+        ]);
+
+        // Check Google Sheets submission
+        if (googleSheetsResponse.status === "rejected") {
+            throw new Error("Failed to submit to Google Sheets");
+        }
+
+        const response = googleSheetsResponse.value;
         if (!response.ok) {
             const errorData: ErrorResponse = await response.json();
             throw new Error(errorData.message || "Failed to submit form");
+        }
+
+        // Log webhook result (don't fail if webhook fails)
+        if (webhookResponse.status === "rejected") {
+            console.warn("Webhook submission failed:", webhookResponse.reason);
         }
 
         const result: SubmissionResponse = await response.json();
