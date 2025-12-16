@@ -3,6 +3,8 @@ import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
+import "video.js/dist/video-js.css";
+import "./videojs-theme.css";
 
 const gothamRounded = localFont({
     src: [

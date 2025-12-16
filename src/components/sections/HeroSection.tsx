@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/ui/Button";
 import { VideoPlaceholder } from "@/ui/VideoPlaceholder";
+import { VideoPlayer } from "@/ui/VideoPlayer";
 import { scrollToForm } from "@/utils/scrollToForm";
 import { trackCTAClick } from "@/lib/gtm";
 
@@ -23,17 +24,13 @@ export function HeroSection() {
 
             <div className="mb-6 px-6 xl:mb-20">
                 <VideoPlaceholder>
-                    <video
-                        className="w-full rounded-sm"
-                        controls
+                    <VideoPlayer
+                        src="https://s3.milkyano.com/milkyano/stop-whining/vsl-stop-whining.mp4"
                         poster="https://s3.milkyano.com/milkyano/stop-whining/vsl-video-thumbnail.png"
-                    >
-                        <source
-                            src="https://s3.milkyano.com/milkyano/stop-whining/vsl-stop-whining.mp4"
-                            type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                    </video>
+                        autoplay={false}
+                        muted={false}
+                        className="w-full rounded-sm"
+                    />
                 </VideoPlaceholder>
             </div>
 
@@ -41,13 +38,13 @@ export function HeroSection() {
                 <h2 className="mb-1.5 text-center text-2xl font-bold text-white xl:mb-16 xl:text-5xl">
                     Associated with
                 </h2>
-                <div className="mx-auto flex h-7 items-center justify-center gap-5 xl:h-28 xl:max-w-4xl xl:gap-20">
+                <div className="mx-auto flex h-7 max-w-53 items-center justify-center gap-5 xl:h-28 xl:max-w-4xl xl:gap-20">
                     <div className="h-full xl:w-56">
                         <Image
                             alt="Muli Oyster Bar Logo"
                             src="https://s3.milkyano.com/milkyano/stop-whining/muli-oyster-bar-logo.png"
-                            width={432}
-                            height={214}
+                            width={864}
+                            height={428}
                             className="h-full w-full"
                         />
                     </div>
@@ -55,8 +52,8 @@ export function HeroSection() {
                         <Image
                             alt="Stop Whining Long Logo"
                             src="https://s3.milkyano.com/milkyano/stop-whining/stop-whining-long-logo.png"
-                            width={982}
-                            height={206}
+                            width={1964}
+                            height={412}
                             className="h-full w-full"
                         />
                     </div>
