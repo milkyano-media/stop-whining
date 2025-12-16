@@ -4,8 +4,15 @@ import Image from "next/image";
 import { Button } from "@/ui/Button";
 import { VideoPlaceholder } from "@/ui/VideoPlaceholder";
 import { scrollToForm } from "@/utils/scrollToForm";
+import { trackCTAClick } from "@/lib/gtm";
 
 export function HeroSection() {
+    const handleCTAClick = () => {
+        const scrollDepth = Math.round((window.scrollY / document.documentElement.scrollHeight) * 100);
+        trackCTAClick("hero", "SEE IF YOU QUALIFY", scrollDepth);
+        scrollToForm();
+    };
+
     return (
         <section className="xl:mb-22">
             <div className="mb-4 px-6 xl:mb-20">
@@ -57,7 +64,7 @@ export function HeroSection() {
             </div>
 
             <div className="mb-12 px-6">
-                <Button variant="primary" onClick={scrollToForm}>
+                <Button variant="primary" onClick={handleCTAClick}>
                     SEE IF YOU QUALIFY
                 </Button>
             </div>

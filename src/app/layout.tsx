@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
 const gothamRounded = localFont({
@@ -72,7 +73,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${gothamRounded.variable} ${inter.variable} ${poppins.variable} overflow-x-hidden`}>
-            <body className="bg-primary overflow-x-hidden pt-4 text-white antialiased">{children}</body>
+            <body className="bg-primary overflow-x-hidden pt-4 text-white antialiased">
+                {process.env.NEXT_PUBLIC_GTM_ID && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />}
+                {children}
+            </body>
         </html>
     );
 }
