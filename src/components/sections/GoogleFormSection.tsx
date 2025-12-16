@@ -10,6 +10,7 @@ import FormSelect from "@/ui/FormSelect";
 import FormFileUpload from "@/ui/FormFileUpload";
 import { googleFormSchema, type GoogleFormData } from "@/schemas/googleFormSchema";
 import { submitFormToGoogleSheets } from "@/services/googleSheetsApi";
+import { trackFormSubmit } from "@/lib/gtm";
 
 export function GoogleFormSection() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,6 +60,7 @@ export function GoogleFormSection() {
             });
 
             setSubmitSuccess(true);
+            trackFormSubmit("application-form", "success");
             reset();
 
             // Auto-hide success message after 5 seconds
@@ -66,7 +68,9 @@ export function GoogleFormSection() {
                 setSubmitSuccess(false);
             }, 5000);
         } catch (error) {
-            setSubmitError(error instanceof Error ? error.message : "An error occurred while submitting the form");
+            const errorMessage = error instanceof Error ? error.message : "An error occurred while submitting the form";
+            setSubmitError(errorMessage);
+            trackFormSubmit("application-form", "error", error instanceof Error ? error.message : undefined);
         } finally {
             setIsSubmitting(false);
         }

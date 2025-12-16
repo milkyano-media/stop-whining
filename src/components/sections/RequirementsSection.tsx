@@ -8,8 +8,15 @@ import Ellipse5 from "@/components/ui/ellipses/Ellipse5";
 import Ellipse6 from "@/components/ui/ellipses/Ellipse6";
 import Ellipse7 from "@/components/ui/ellipses/Ellipse7";
 import { scrollToForm } from "@/utils/scrollToForm";
+import { trackCTAClick } from "@/lib/gtm";
 
 export function RequirementsSection() {
+    const handleCTAClick = () => {
+        const scrollDepth = Math.round((window.scrollY / document.documentElement.scrollHeight) * 100);
+        trackCTAClick("requirements", "SEE IF YOU QUALIFY", scrollDepth);
+        scrollToForm();
+    };
+
     return (
         <section className="mb-7">
             <div className="font-inter mb-20 flex flex-col gap-4 px-6 xl:mb-22 xl:gap-10 xl:px-80">
@@ -49,7 +56,7 @@ export function RequirementsSection() {
             </div>
 
             <div>
-                <Button variant="secondary" onClick={scrollToForm}>
+                <Button variant="secondary" onClick={handleCTAClick}>
                     SEE IF YOU QUALIFY
                 </Button>
             </div>

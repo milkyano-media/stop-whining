@@ -4,8 +4,15 @@ import { BenefitItem } from "@/ui/BenefitItem";
 import { Button } from "@/ui/Button";
 import Ellipse8 from "@/components/ui/ellipses/Ellipse8";
 import { scrollToForm } from "@/utils/scrollToForm";
+import { trackCTAClick } from "@/lib/gtm";
 
 export function BenefitsSection() {
+    const handleCTAClick = () => {
+        const scrollDepth = Math.round((window.scrollY / document.documentElement.scrollHeight) * 100);
+        trackCTAClick("benefits", "SEE IF YOU QUALIFY", scrollDepth);
+        scrollToForm();
+    };
+
     return (
         <section className="px-6 py-10 xl:px-80">
             <article className="gradient-benefit-card shadow-card relative rounded-2xl border border-gray-200 px-6 py-10 before:absolute before:top-0 before:left-1/2 before:block before:h-1 before:w-48 before:-translate-x-1/2 before:bg-white">
@@ -43,7 +50,7 @@ export function BenefitsSection() {
                         description="We don't treat staff like replaceable labour. Your personality, ambition, and work ethic matter."
                     />
 
-                    <Button variant="white" onClick={scrollToForm}>
+                    <Button variant="white" onClick={handleCTAClick}>
                         SEE IF YOU QUALIFY
                     </Button>
                 </div>
