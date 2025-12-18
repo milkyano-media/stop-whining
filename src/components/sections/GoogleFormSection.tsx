@@ -7,6 +7,7 @@ import FormInput from "@/ui/FormInput";
 import FormTextarea from "@/ui/FormTextarea";
 import PhoneInput from "@/ui/PhoneInput";
 import FormSelect from "@/ui/FormSelect";
+import FormCheckboxGroup from "@/ui/FormCheckboxGroup";
 import FormFileUpload from "@/ui/FormFileUpload";
 import { googleFormSchema, type GoogleFormData } from "@/schemas/googleFormSchema";
 import { submitFormToGoogleSheets } from "@/services/googleSheetsApi";
@@ -133,16 +134,28 @@ export function GoogleFormSection() {
                         {...register("age")}
                     />
 
-                    {/* Speak Mandarin */}
-                    <FormSelect
-                        label="Do you speak Mandarin?"
-                        options={[
-                            { value: "yes", label: "Yes" },
-                            { value: "no", label: "No" },
-                        ]}
-                        error={errors.speakMandarin?.message}
-                        required
-                        {...register("speakMandarin")}
+                    {/* Spoken Languages */}
+                    <Controller
+                        name="speakMandarin"
+                        control={control}
+                        render={({ field }) => (
+                            <FormCheckboxGroup
+                                label="Which languages do you speak?"
+                                options={[
+                                    { value: "English", label: "English" },
+                                    { value: "Mandarin", label: "Mandarin" },
+                                    { value: "Cantonese", label: "Cantonese" },
+                                    { value: "Japanese", label: "Japanese" },
+                                    { value: "Korean", label: "Korean" },
+                                ]}
+                                value={field.value}
+                                onChange={field.onChange}
+                                error={errors.speakMandarin?.message}
+                                required
+                                enableOther
+                                otherLabel="Other (please specify)"
+                            />
+                        )}
                     />
 
                     {/* English Rating */}

@@ -24,8 +24,29 @@ export const googleFormSchema = z.object({
 
     speakMandarin: z
         .string()
-        .min(1, "Please select an option")
-        .refine((val) => val === "yes" || val === "no", "Invalid selection"),
+        .min(1, "Please select at least one language")
+        .refine(
+            (val) => {
+                const languages = val.split(',').map(l => l.trim()).filter(Boolean);
+                return languages.length > 0;
+            },
+            { message: "Please select at least one language" }
+        )
+        .refine(
+            (val) => {
+                const languages = val.split(',').map(l => l.trim()).filter(Boolean);
+                const validLanguages = ['English', 'Mandarin', 'Cantonese', 'Japanese', 'Korean'];
+
+                return languages.every(lang => {
+                    if (lang.startsWith('Other:')) {
+                        const otherText = lang.substring(6).trim();
+                        return otherText.length > 0;
+                    }
+                    return validLanguages.includes(lang);
+                });
+            },
+            { message: "Invalid language selection" }
+        ),
 
     englishRating: z
         .string()
