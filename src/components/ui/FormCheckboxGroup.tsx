@@ -192,6 +192,7 @@ const FormCheckboxGroup = ({
                                 value={otherText}
                                 onChange={(e) => handleOtherTextChange(e.target.value)}
                                 placeholder="Please specify"
+                                autoComplete="off"
                                 className={`font-inter h-10 w-full max-w-xs rounded-lg border px-3 text-base leading-6 text-[#344054] transition-colors outline-none ml-8 mt-2 ${
                                     error ? "border-red-500" : "border-[#d0d5dd]"
                                 } ${error ? "focus:border-red-500" : "focus:border-primary"}`}

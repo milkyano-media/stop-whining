@@ -27,6 +27,7 @@ export const googleFormSchema = z.object({
         .min(1, "Please select at least one language")
         .refine(
             (val) => {
+                if (!val || val.trim() === '') return false;
                 const languages = val.split(',').map(l => l.trim()).filter(Boolean);
                 return languages.length > 0;
             },
@@ -38,14 +39,17 @@ export const googleFormSchema = z.object({
                 const validLanguages = ['English', 'Mandarin', 'Cantonese', 'Japanese', 'Korean'];
 
                 return languages.every(lang => {
+                    // Allow any text after "Other:" - no character restrictions
                     if (lang.startsWith('Other:')) {
                         const otherText = lang.slice('Other:'.length).trim();
+                        // Only requirement: must not be empty
                         return otherText.length > 0;
                     }
+                    // Must be one of the predefined languages
                     return validLanguages.includes(lang);
                 });
             },
-            { message: "Invalid language selection" }
+            { message: "Please enter a language in the Other field or select from the list" }
         ),
 
     englishRating: z
