@@ -39,7 +39,7 @@ export const googleFormSchema = z.object({
 
                 return languages.every(lang => {
                     if (lang.startsWith('Other:')) {
-                        const otherText = lang.substring(6).trim();
+                        const otherText = lang.slice('Other:'.length).trim();
                         return otherText.length > 0;
                     }
                     return validLanguages.includes(lang);
