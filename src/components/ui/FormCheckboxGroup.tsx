@@ -98,14 +98,23 @@ const FormCheckboxGroup = ({
 
         if (checked) {
             newSelected = [...selectedValues, "Other"];
+            setSelectedValues(newSelected);
+            // Don't call onChange yet if there's no text - wait for user to type
+            if (otherText.trim()) {
+                const newValue = serializeValue(newSelected, otherText);
+                onChange(newValue);
+            } else {
+                // Still call onChange to update form state, but without Other in the value
+                const newValue = serializeValue(newSelected.filter(v => v !== "Other"), "");
+                onChange(newValue);
+            }
         } else {
             newSelected = selectedValues.filter((v) => v !== "Other");
+            setSelectedValues(newSelected);
             setOtherText(""); // Clear text when unchecking
+            const newValue = serializeValue(newSelected, "");
+            onChange(newValue);
         }
-
-        setSelectedValues(newSelected);
-        const newValue = serializeValue(newSelected, checked ? otherText : "");
-        onChange(newValue);
     };
 
     const handleOtherTextChange = (text: string) => {
@@ -183,6 +192,7 @@ const FormCheckboxGroup = ({
                                 value={otherText}
                                 onChange={(e) => handleOtherTextChange(e.target.value)}
                                 placeholder="Please specify"
+                                autoComplete="off"
                                 className={`font-inter h-10 w-full max-w-xs rounded-lg border px-3 text-base leading-6 text-[#344054] transition-colors outline-none ml-8 mt-2 ${
                                     error ? "border-red-500" : "border-[#d0d5dd]"
                                 } ${error ? "focus:border-red-500" : "focus:border-primary"}`}
