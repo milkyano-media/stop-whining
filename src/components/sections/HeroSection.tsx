@@ -40,6 +40,17 @@ export function HeroSection() {
                 </p>
             </div>
 
+            <div className="mb-10 px-6">
+                <Image
+                    alt="Google Rating"
+                    src="https://s3.milkyano.com/milkyano/stop-whining/google-rating.svg"
+                    width={222}
+                    height={44}
+                    className="mx-auto w-auto"
+                    loading="eager"
+                />
+            </div>
+
             <div className="mb-15 px-6">
                 <h2 className="mb-1.5 text-center text-2xl font-bold text-white xl:mb-16 xl:text-5xl">
                     Associated with

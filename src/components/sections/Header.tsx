@@ -16,16 +16,7 @@ export function Header() {
                 </div>
             </div>
 
-            <div className="mb-6 px-6">
-                <Image
-                    alt="Google Rating"
-                    src="https://s3.milkyano.com/milkyano/stop-whining/google-rating.svg"
-                    width={222}
-                    height={44}
-                    className="mx-auto w-auto"
-                    loading="eager"
-                />
-            </div>
+            
         </header>
     );
 }
