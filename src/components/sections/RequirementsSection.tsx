@@ -21,6 +21,15 @@ export function RequirementsSection() {
         <section className="mb-7">
             <div className="font-inter mb-20 flex flex-col gap-4 px-6 xl:mb-22 xl:gap-10 xl:px-80">
                 <RequirementCard
+                    title="SEAFOOD KNOWLEDGE"
+                    ellipse={<Ellipse5 />}
+                    footnote="*BONUS: Have knowledge of and hands-on experience in the seafood space."
+                >
+                    <ChecklistItem variant="x">Basic Understanding of Oysters & seafood in general</ChecklistItem>
+                    <ChecklistItem variant="x">Has eaten a variety of seafood growing up</ChecklistItem>
+                </RequirementCard>
+
+                <RequirementCard
                     title="QUALITIES"
                     ellipse={<Ellipse4 />}
                     footnote="*Note: we value someone who has unique personality with charisma, confidence, and ambitions."
@@ -32,15 +41,6 @@ export function RequirementsSection() {
                     <ChecklistItem>Mentally strong</ChecklistItem>
                     <ChecklistItem>Big confidence in skills</ChecklistItem>
                     <ChecklistItem>Able to work under pressure</ChecklistItem>
-                </RequirementCard>
-
-                <RequirementCard
-                    title="SEAFOOD KNOWLEDGE"
-                    ellipse={<Ellipse5 />}
-                    footnote="*BONUS: Grew up by the coast and have experience in prepping seafood."
-                >
-                    <ChecklistItem>Basic Understanding of Oysters & seafood in general</ChecklistItem>
-                    <ChecklistItem>Has eaten a variety of seafood growing up</ChecklistItem>
                 </RequirementCard>
 
                 <RequirementCard title="AGE RANGE" ellipse={<Ellipse6 />}>
