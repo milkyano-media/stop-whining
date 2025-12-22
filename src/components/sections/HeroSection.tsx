@@ -18,11 +18,11 @@ export function HeroSection() {
         <section className="xl:mb-22">
             <div className="mb-4 px-6 xl:mb-20">
                 <h1 className="text-center text-2xl font-bold text-white xl:px-96 xl:text-5xl">
-                    ARE YOU THE ONE WHO DESERVES THIS SPOT?
+                    LOOKING TO WORK AND LEARN IN SEAFOOD?
                 </h1>
             </div>
 
-            <div className="mb-6 px-6 xl:mb-20">
+            <div className="mb-6 px-6 xl:mb-15">
                 <VideoPlaceholder>
                     <VideoPlayer
                         src="https://s3.milkyano.com/milkyano/stop-whining/vsl-stop-whining.mp4"
@@ -34,7 +34,13 @@ export function HeroSection() {
                 </VideoPlaceholder>
             </div>
 
-            <div className="mb-8 px-6">
+            <div className="mb-8 px-6 text-center xl:px-0 xl:mb-20">
+                <p className="px-7 font-medium xl:px-80 xl:text-2xl">
+                    No experience needed. We&apos;ll teach you from zero. Bonus if you already have some knowledge.
+                </p>
+            </div>
+
+            <div className="mb-15 px-6">
                 <h2 className="mb-1.5 text-center text-2xl font-bold text-white xl:mb-16 xl:text-5xl">
                     Associated with
                 </h2>
@@ -62,7 +68,7 @@ export function HeroSection() {
 
             <div className="mb-12 px-6">
                 <Button variant="primary" onClick={handleCTAClick}>
-                    SEE IF YOU QUALIFY
+                    TAKE YOUR CHANCE
                 </Button>
             </div>
         </section>

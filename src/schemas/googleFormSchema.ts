@@ -58,20 +58,20 @@ export const googleFormSchema = z.object({
         .refine((val) => !isNaN(Number(val)), "Rating must be a number")
         .refine((val) => Number(val) >= 1 && Number(val) <= 10, "Rating must be between 1 and 10"),
 
-    whyWorkHere: z
-        .string()
-        .min(1, "This field is required")
-        .min(10, "Please provide a more detailed answer (at least 10 characters)"),
+    // whyWorkHere: z
+    //     .string()
+    //     .min(1, "This field is required")
+    //     .min(10, "Please provide a more detailed answer (at least 10 characters)"),
 
-    whatMotivatesYou: z
-        .string()
-        .min(1, "This field is required")
-        .min(10, "Please provide a more detailed answer (at least 10 characters)"),
+    // whatMotivatesYou: z
+    //     .string()
+    //     .min(1, "This field is required")
+    //     .min(10, "Please provide a more detailed answer (at least 10 characters)"),
 
-    yourGoal: z
-        .string()
-        .min(1, "This field is required")
-        .min(10, "Please provide a more detailed answer (at least 10 characters)"),
+    // yourGoal: z
+    //     .string()
+    //     .min(1, "This field is required")
+    //     .min(10, "Please provide a more detailed answer (at least 10 characters)"),
 
     seafoodKnowledge: z
         .string()

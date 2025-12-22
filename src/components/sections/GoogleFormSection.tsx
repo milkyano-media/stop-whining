@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import FormInput from "@/ui/FormInput";
 import FormTextarea from "@/ui/FormTextarea";
 import PhoneInput from "@/ui/PhoneInput";
-import FormSelect from "@/ui/FormSelect";
+// import FormSelect from "@/ui/FormSelect";
 import FormCheckboxGroup from "@/ui/FormCheckboxGroup";
 import FormFileUpload from "@/ui/FormFileUpload";
 import { googleFormSchema, type GoogleFormData } from "@/schemas/googleFormSchema";
@@ -34,9 +34,9 @@ export function GoogleFormSection() {
             age: "",
             speakMandarin: "",
             englishRating: "",
-            whyWorkHere: "",
-            whatMotivatesYou: "",
-            yourGoal: "",
+            // whyWorkHere: "",
+            // whatMotivatesYou: "",
+            // yourGoal: "",
             seafoodKnowledge: "",
             workPhilosophy: "",
             resumeUrl: "",
@@ -171,31 +171,31 @@ export function GoogleFormSection() {
                     />
 
                     {/* Why do you want to work */}
-                    <FormInput
+                    {/* <FormInput
                         label="Why do you want to work?"
                         placeholder="Why do you want to work?*"
                         error={errors.whyWorkHere?.message}
                         required
                         {...register("whyWorkHere")}
-                    />
+                    /> */}
 
                     {/* What motivates you */}
-                    <FormInput
+                    {/* <FormInput
                         label="What motivates you?"
                         placeholder="What motivates you?*"
                         error={errors.whatMotivatesYou?.message}
                         required
                         {...register("whatMotivatesYou")}
-                    />
+                    /> */}
 
                     {/* Your goal */}
-                    <FormInput
+                    {/* <FormInput
                         label="What is your goal?"
                         placeholder="What is your goal?*"
                         error={errors.yourGoal?.message}
                         required
                         {...register("yourGoal")}
-                    />
+                    /> */}
 
                     {/* Seafood knowledge */}
                     <FormInput
