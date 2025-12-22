@@ -171,31 +171,31 @@ export function GoogleFormSection() {
                     />
 
                     {/* Why do you want to work */}
-                    <FormInput
+                    {/* <FormInput
                         className="hidden"
                         label="Why do you want to work?"
                         placeholder="Why do you want to work?*"
                         error={errors.whyWorkHere?.message}
                         {...register("whyWorkHere")}
-                    />
+                    /> */}
 
                     {/* What motivates you */}
-                    <FormInput
+                    {/* <FormInput
                         className="hidden"
                         label="What motivates you?"
                         placeholder="What motivates you?*"
                         error={errors.whatMotivatesYou?.message}
                         {...register("whatMotivatesYou")}
-                    />
+                    /> */}
 
                     {/* Your goal */}
-                    <FormInput
+                    {/* <FormInput
                         className="hidden"
                         label="What is your goal?"
                         placeholder="What is your goal?*"
                         error={errors.yourGoal?.message}
                         {...register("yourGoal")}
-                    />
+                    /> */}
 
                     {/* Seafood knowledge */}
                     <FormInput
