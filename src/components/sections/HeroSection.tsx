@@ -10,7 +10,7 @@ import { trackCTAClick } from "@/lib/gtm";
 export function HeroSection() {
     const handleCTAClick = () => {
         const scrollDepth = Math.round((window.scrollY / document.documentElement.scrollHeight) * 100);
-        trackCTAClick("hero", "SEE IF YOU QUALIFY", scrollDepth);
+        trackCTAClick("hero", "TAKE YOUR CHANCE", scrollDepth);
         scrollToForm();
     };
 

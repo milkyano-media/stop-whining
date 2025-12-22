@@ -13,7 +13,7 @@ import { trackCTAClick } from "@/lib/gtm";
 export function RequirementsSection() {
     const handleCTAClick = () => {
         const scrollDepth = Math.round((window.scrollY / document.documentElement.scrollHeight) * 100);
-        trackCTAClick("requirements", "SEE IF YOU QUALIFY", scrollDepth);
+        trackCTAClick("requirements", "TAKE YOUR CHANCE", scrollDepth);
         scrollToForm();
     };
 
@@ -57,7 +57,7 @@ export function RequirementsSection() {
 
             <div>
                 <Button variant="secondary" onClick={handleCTAClick}>
-                    SEE IF YOU QUALIFY
+                    TAKE YOUR CHANCE
                 </Button>
             </div>
         </section>

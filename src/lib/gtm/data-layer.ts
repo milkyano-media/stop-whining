@@ -42,7 +42,7 @@ function pushToDataLayer(event: GTMEvent): void {
  */
 export function trackCTAClick(
     location: CTAClickEvent["cta_location"],
-    text: string = "SEE IF YOU QUALIFY",
+    text: string = "TAKE YOUR CHANCE",
     scrollDepth?: number
 ): void {
     pushToDataLayer({
