@@ -9,7 +9,7 @@ import { trackCTAClick } from "@/lib/gtm";
 export function BenefitsSection() {
     const handleCTAClick = () => {
         const scrollDepth = Math.round((window.scrollY / document.documentElement.scrollHeight) * 100);
-        trackCTAClick("benefits", "SEE IF YOU QUALIFY", scrollDepth);
+        trackCTAClick("benefits", "TAKE YOUR CHANCE", scrollDepth);
         scrollToForm();
     };
 
@@ -51,7 +51,7 @@ export function BenefitsSection() {
                     />
 
                     <Button variant="white" onClick={handleCTAClick}>
-                        SEE IF YOU QUALIFY
+                        TAKE YOUR CHANCE
                     </Button>
                 </div>
             </article>

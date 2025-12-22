@@ -278,7 +278,7 @@ export function GoogleFormSection() {
                             background: "linear-gradient(135deg, #035a7c 0%, #1d3a69 80.51%)",
                         }}
                     >
-                        {isSubmitting ? "SUBMITTING..." : "SEE IF YOU QUALIFY"}
+                        {isSubmitting ? "SUBMITTING..." : "TAKE YOUR CHANCE"}
                     </button>
                 </form>
             </div>
